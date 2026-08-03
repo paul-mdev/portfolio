@@ -1,0 +1,531 @@
+/* Importation de la police Playfair Display depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Importation de la police Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Importation de la police Chakra UI (chakra_bold) depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+:root {
+  --gris-claire: #f5f5f5;
+  --gris-foncee: #222222;
+  --noir: #000000;
+  --blanc: #ffffff;
+  --bleu: #007bff;
+}
+
+@media (max-width: 769px) {
+  .spotify-embed { display: none; }
+  .spotify-link { display: block; }
+}
+@media (min-width: 769px) {
+  .spotify-embed { display: block; }
+  .spotify-link { display: none; }
+}
+
+@media (max-width: 768px) {
+  .piano-container, .piano-header {
+    display: none !important;
+  }
+}
+
+.album-title {
+  font-family: chakra_bold ;
+  font-weight: 1600;
+  color: var(--gris-foncee);
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+body {
+    font-size: 1.25rem; /* ≈ 20px */
+    background-color: var(--blanc);
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+
+    /* à laisser */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+
+  .dark-mode {
+    background-color: var(--noir);
+    color: var(--blanc);
+}
+
+.header-banner, .footer-content{
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* Header */
+.header-banner {
+    min-height: 85px;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+                    url("../img/channel_banner.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+
+/* Liens dans la nav */
+.site-nav a {
+  text-decoration: none;
+  color: var(--gris-foncee);
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Sidebar gauche */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10vw; /* largeur relative à l'écran */
+  height: 100vh;
+  display: block; /* visible en desktop */
+  transition: all 0.3s ease;
+  z-index: 998;
+}
+
+header.site-header.css-container {
+  padding: 1rem !important;
+}
+
+
+
+/* Liens en colonne */
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 50px; /* Ajoute de l'espace en haut des liens */
+}
+
+/* Décale le contenu du site */
+body {
+  margin-left: 10vw;
+}
+
+/* Le bouton hamburger */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  z-index: 999;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  display: none; /* caché par défaut */
+  cursor: pointer;
+  color: var(--noir);
+}
+
+.dark-mode .menu-toggle
+{
+  color: var(--blanc);
+}
+
+
+
+/* ---------- Responsive ---------- */
+.site-nav a {
+  font-size: 0.9rem; /* taille par défaut (desktop) */
+}
+
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-header {
+    position: fixed;
+
+    /*taille de la page à gauche */
+    width: 100%;
+    height: 100vh;
+    margin-left: 0;
+    transform: translateX(-300%);
+    text-align: center;
+  }
+
+  /* quand on appuie sur le hamburger */
+  .site-header.open {
+    display: block;
+    transform: translateX(0);
+
+  }
+
+  body {
+    margin-left: 0;
+  }
+
+  .site-nav a {
+    font-size: 2.6rem !important;
+  }
+
+  .site-nav{
+       padding-top: 25rem; /* espace pour le bouton */
+  }
+}
+
+
+
+
+
+/* Tablette : moins de 992px */
+@media (max-width: 991px) {
+  .site-nav a {
+    font-size: 0.67rem;
+  }
+}
+
+/* Grand écran : ≥ 1200px */
+@media (min-width: 1200px) {
+  .site-nav a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Très grand écran : ≥ 1600px */
+@media (min-width: 1600px) {
+  .site-nav a {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* Image de couverture */
+.cover-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+.toggle-theme {
+    background: none;
+    border:none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0);
+  }
+
+.toggle-theme img {
+    width: 48px; /* plus petit */
+    height: 48px; /* plus petit */
+}
+
+.toggle-theme-wrapper {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 999; /* s'assure qu'il est au-dessus de tout */
+}
+
+.description {
+  display: block; /* Assure que c'est un bloc */
+  font-size: 1.0rem !important;
+  text-align: justify !important;
+}
+
+/* simple-button */
+.simple-button{
+  border-radius: 5px; /* bordure arrondie */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1rem;
+  background-color: var(--gris-claire);
+  color: var(--gris-foncee);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .simple-button{
+  background-color: var(--gris-foncee);
+  color: var(--gris-claire);
+}
+
+.simple-button:hover{
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+
+
+.dark-mode .simple-button:hover{
+  background-color: var(--bleu);
+}
+
+
+
+.css-container{
+    height: 100%;
+    justify-content: center; /* facultatif : centrer verticalement le contenu */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--gris-claire);
+    border-radius: 5px; /* bordure arrondie */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  
+.css-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profil{
+  align-items: center;
+}
+
+
+.image-profil {
+    width: 180px;
+    height: 180px; /* force un carré */
+    border-radius: 50%;
+    object-fit: cover; /* croppe sans déformer */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    object-position: center; /* centre l'image dans le crop */
+}
+
+.titre-nom {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.titre-cv {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.titre-profil{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+  
+  .social-links {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .social-button {
+    display: block;
+    padding: 0.75rem 1rem;
+    background-color: var(--blanc);
+    color: var(--gris-foncee);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .social-button:hover {
+    background-color: var(--gris-foncee);
+    color: var(--blanc);
+  }
+  
+  .dark-mode .social-button 
+  {
+    background-color: var(--noir);
+    color: var(--blanc);
+  }
+
+  .dark-mode .social-button:hover {
+    color: var(--gris-foncee);
+    background-color: var(--blanc);
+  }
+
+
+
+
+
+/* dark-mod */
+
+.dark-mode .css-container,
+.dark-mode .footer-content
+{
+  background-color: var(--gris-foncee);
+}
+
+.dark-mode .footer-content,
+.dark-mode .album-title
+{
+  color: var(--blanc);
+}
+
+
+.dark-mode .site-nav a {
+  color: var(--gris-claire);
+}
+
+/* En dark-mode : on change le fond avec un gradient transparent vers noir */
+.dark-mode .header-banner {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+                    url("../img/channel_banner.jpg");
+
+}
+
+
+/* footer */
+.footer-content {
+  font-size: 1rem;
+  margin: 0 auto; /* Centre le footer horizontalement */
+}
+  
+.footer-content a {
+  color: var(--bleu);
+  text-decoration: none;
+}
+  
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.2em; /* Utilise une unité relative à la taille de texte */
+    margin: 0;
+}
+
+ul ul {
+    list-style-type: circle;
+    padding-left: 2em; /* Plus profond pour les sous-listes */
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ul ul li {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+.unlisted {
+    list-style: none; /* Enlève les puces de la liste */
+    padding: 0;
+}
+
+
+span {
+    font-weight: bold; /* Mettre en gras les compétences */
+}
+
+.progress-bar {
+    background-color: #4caf50; /* Vert pour les barres */
+    border-radius: 5px;
+    height: 15px;
+    color: var(--blanc);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+
+
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+}

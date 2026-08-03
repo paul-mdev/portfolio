@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Nothing to see here (: -->
+
+<head>
+    <title>Portfolio Paul</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    
+    <script src="script/include.js" defer></script>
+</head>
+
+<body>
+    <!-- header pages -->
+    <div data-include="/layout/header.html"></div>
+
+    <!-- main -->
+    <main>
+
+
+<section class="container mt-4">
+  <div class="row gy-4">
+    <div class="col-12">
+      <div class="text-center">
+        <h1 class="titre-profil">Mon CV</h1>
+
+        <!-- Aperçu intégré du CV -->
+        <div class="ratio ratio-4x3 mb-4">
+          <iframe src="cv-paul-maillard.pdf" title="CV de Paul Maillard" allowfullscreen></iframe>
+        </div>
+
+        <!-- Boutons côte à côte -->
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+          <a href="cv-paul-maillard.pdf" class="btn simple-button" download>
+            Télécharger le CV (PDF)
+          </a>
+          <a href="portfolio.html" title="Retourner au portfolio" class="btn simple-button">
+            Retour au Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      </main>
+
+    <!-- footer -->
+    <div data-include="/layout/footer.html"></div>
+
+</body>
+
+</html>

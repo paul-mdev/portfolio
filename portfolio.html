@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Nothing to see here (: -->
+
+<head>
+    <title>Portfolio Paul</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    
+    <script src="script/include.js" defer></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div data-include="/layout/header.html"></div>
+
+
+
+<main>
+    <!-- Section d'introduction + Profil -->
+    <section class="container mt-5">
+        <div class="row">
+            <!-- Container avec image de profil -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="css-container profil text-center">
+                    <img src="img/profil-cv.webp" alt="Image de profil" class="image-profil">
+                    <h1 class="titre-profil">Paul Maillard</h1>
+                </div>
+            </div>
+            
+            <!-- Container avec texte de profil -->
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="css-container">
+                    <h2 class="titre-cv">Portfolio</h2>
+                    <p class="section-description">
+                        Bienvenue sur mon portfolio !
+                    </p>
+
+                    <p class="section-description">
+                        Je m'appelle <strong>Paul Maillard</strong>, j'ai <strong>20 ans</strong> et je suis actuellement étudiant en <strong>BUT3</strong> Informatique à l'IUT de l'UPJV d'Amiens.
+                        Sur ce site, vous découvrirez mes projets, mes compétences, ainsi que mes expériences dans le domaine de <strong>l'informatique</strong>.
+                    </p>
+
+                    <p>
+                        J'ai découvert l'informatique en première en spécialité NSI, et j'ai tout de suite su que c'était ce que je voulais faire plus tard.
+                    </p>
+
+                    <p>
+                       <strong>Consultez également : </strong><a href="cv.html" title="Consulter mon CV">Mon CV</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Me Contacter + Formation -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="css-container">
+                    <h3 class="titre-cv">Me contacter</h3>
+                    <ul class="list-unstyled">
+                        <li><strong>Téléphone :</strong> 06 95 69 23 22</li>
+                        <li><strong>Email :</strong> <a href="mailto:paul.maillard05@gmail.com">paul.maillard05@gmail.com</a></li>
+                        <li><strong>Adresse :</strong> 18 rue de la Fontaine Fréteau Le Meux 60880</li>
+                        <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/paul-maillard-pro" target="_blank">www.linkedin.com/in/paul-maillard-pro</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="css-container">
+                    <h3 class="titre-cv">Formation</h3>
+                    <ul class="unlisted">
+                        <li><strong>IUT UPJV d’Amiens</strong>
+                            <ul>
+                                <li>Actuellement en BUT3 d’informatique Parcours RACA (REALISATION D'APPLICATIONS : CONCEPTION, DEVELOPPEMENT, VALIDATION)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Lycée Jean Paul II, Compiègne</strong> 
+                            <ul>
+                                <li>Baccalauréat général, mention Bien (2023)</li>
+                                <li>Spécialités : Mathématiques et NSI</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Expériences -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="css-container">
+                    <h3 class="titre-cv">Expériences</h3>
+                    <ul class="unlisted">
+                        <li>
+                            <strong>Stage de développement informatique</strong> 3 mois à Isagri (02/03/2026, Beauvais)
+                            <ul>
+                                <li>Réécriture de 320+ requêtes de synchro WS SOAP vers API REST</li>
+                                <li>Optimisation des performances</li>
+                                <li>Gestion des logs</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>CDD 1 mois et demi à la Clinique Victor Pauchet</strong> (30/06/2025, Amiens ) + <strong>stage de 2 mois</strong> (13/01/2025)
+                            <ul>
+                                <li>Application C# pour l’archivage quotidien de documents médicaux</li>
+                                <li>Création d’une BDD PostgreSQL conforme aux normes du secteur médical</li>
+                                <li>Développement d'une GED avec le modèle MVC</li>
+                                <li>Mise en production du projet</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Stage d’observation</strong> à Exotest, (25/06/2021, Compiègne)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PROJETS ------------------------------------------------------------------------------------------->
+    <section class="container mt-4">
+        <h2 class="titre-cv"><strong>Mes projets</strong></h2>
+        <!-- Projets personnels ----------------------------------------->
+        <section class="container mt-4">
+            <h3 class="titre-cv">Projets personnels</h3>
+            <div class="row g-4">
+
+                <!-- Tilescape -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/tilescape.png', `
+                    Jeu 2D (Godot Engine, Gdscript) en pixel art à vue de côté, en monde ouvert, centré sur l'exploration.
+                    `)">
+                        <img src="img/projects/tilescape.png" alt="Tilescape" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Tilescape: mon jeu (2023 / 2026)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaizo -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/kaizo-day.png', 'Jeu vidéo platformer réalisé avec Godot Engine')">
+                        <img src="img/projects/kaizo-day.png" alt="Kaizo" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Kaizo: mon ancien jeu (2022 / 2023)</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BUT3 ----------------------------------->
+        <section class="container mt-4">
+            <h3 class="titre-cv">BUT3</h3>
+            <div class="row g-4">
+
+                <!-- TCG multijoueur -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/animals-tcg.png', `
+                    TCG (jeu de cartes à collectionner) (Godot Engine, Gdscript) en multijoueur
+                    Intégration de tests unitaires (GdUnit)
+                    Réalisé en équipe de 4 en BUT3
+                    `)">
+                        <img src="img/projects/animals-tcg.png" alt="TCG multijoueur" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">TCG en multijoueur réalisé en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestion logs -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/gestion-logs.png', `
+                    Encapsulation des services dans des containers Docker, accès restreint aux autres services à l'aide de réseaux
+                    Frontend -> HTML, CSS, JS
+                    Worker -> Python, FastAPI
+                    Backend -> C# .NET
+                    Base de données -> PostgreSQL
+                    `)">
+                        <img src="img/projects/gestion-logs.png" alt="Gestion des logs" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Site de gestion et sauvegarde de logs réalisé en équipe de 3</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bibliothèque -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/bibliotheque.png', `
+                    Site web de gestion de livres pour une bibliothèque
+                    Gestion de l'authentification et des rôles (admin, utilisateur)
+                    Réalisé en équipe de 3 en BUT3
+                    C#, Docker, mysql, API REST
+                    `)">
+                        <img src="img/projects/bibliotheque.png" alt="Bibliothèque" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Site web de gestion de livres pour une bibliothèque réalisé en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Démineur -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/démineur.png', `
+                    Jeu du démineur avec intégration de tests unitaires (GUT)
+                    Réalisé en équipe de 3 en BUT3
+                    Godot Engine, Gdscript
+                    `)">
+                        <img src="img/projects/démineur.png" alt="Démineur" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeu du démineur en développement piloté par les tests</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- BUT2 ----------------------------------->
+        <section class="container mt-4">
+            <h3 class="titre-cv">BUT2</h3>
+            <div class="row g-4">
+                <!-- API de paiement -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/pauchet.png', 
+                    `
+                     Application C# pour l’archivage quotidien de documents médicaux
+                     Création d’une BDD PostgreSQL conforme aux normes du secteur médical
+                     Développement d'une GED avec le modèle MVC
+                     Mise en production du projet
+                    `)">
+                        <img src="img/projects/pauchet.png" alt="API Paiement" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Stage à la clinique Victor Pauchet (mis en production lors de mon CDD qui a suivi)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API de paiement -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/API-paiement.png', 
+                    `
+                    Site e-commerce Html + PHP avec intégration de l\'API de paiement du crédit agricole
+                    Réalisé en solo en BUT2
+                    `)">
+                        <img src="img/projects/API-paiement.png" alt="API Paiement" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Site e-commerce avec intégration d’une API de paiement</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestion de fiches de paie -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/gerico.png', 
+                    `
+                    Site web de gestion de fiches de paie d'une entreprise de réseau routier
+                    Utilisation de sqlc pour générer du code Typescript pour intéragir avec les données
+                    Réalise en équipe de 5 en BUT2
+                    `)">
+                                       
+                        <img src="img/projects/gerico.png" alt="Gerico" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Gestion de fiches de paie en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Film o metre-service -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/film-o-metre.png', 
+                    `
+                    Réalisé en solo BUT2
+                    Site React + Vite +Typescript
+                    Données récupérées sur une API gratuite de films et d'animés
+                    `)">
+                        <img src="img/projects/film-o-metre.png" alt="Film o' metre" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Site pour noter des films / animés</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stations-service -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/stations-service.png', 
+                    `
+                    Réalisé en équipe de 4 en BUT2
+                    Site React + Vite
+                    Carte interactive des stations-service en France, inclue le prix et d'autres informations
+                    Données récupérées au format Json sur data.gouv.fr et importées avec Strapi + NodeJS
+                    `)">
+                        <img src="img/projects/stations-service.png" alt="Stations-service" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Carte des stations-service en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculatrice Android Studio -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/calculatrice-light.png', `
+                    Réalisé en équipe de 2 en BUT2 (Android Studio et Java)
+                    Prise en charge de la traduction et de la localisation
+                    `)">
+                        <img src="img/projects/calculatrice-light.png" alt="Calculatrice" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Application mobile de calculs mentaux en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Convertisseur euro -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/convertisseur-euro.png', 'L\'objectif était de faire l\'analyse du projet.\nRéalisé en équipe de 2 en Python.')">
+                        <img src="img/projects/convertisseur-euro.png" alt="Convertisseur euro" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Application console pour convertir une somme d'argent en texte</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUT1 ----------------------------------->
+        <section class="container mt-4">
+            <h3 class="titre-cv">BUT1</h3>
+            <div class="row g-4">
+                
+                <!-- Extranat -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/extranat.png', `
+                    Réalisé en équipe de 3 en BUT1
+                    Développé en C
+                    `)">
+                        <img src="img/projects/extranat.png" alt="Extranat" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Application console de gestion de nageurs</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masques réseau -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/calculateur-masques-reseau.png', `
+                    Application de calcul de masques réseau
+                    Réalisé en équipe de 5 en BUT1
+                    `)">
+                        <img src="img/projects/calculateur-masques-reseau.png" alt="Masques réseau" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Application de calcul de masques réseau réalisé en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Site vitrine Muze -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/site-vitrine-muze.png', `
+                    Réalisé en équipe de 3 en BUT1
+                    Découverte de Boostrap
+                    `)">
+                    
+                    <img src="img/projects/site-vitrine-muze.png" alt="Site vitrine Muze" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Site vitrine responsive réalisé en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puck-Man -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/puck-man.png', `
+                    Jeu développé en équipe de 5 (Winform, C#)
+                    Génération de labyrinthes aléatoires et ennemis avec IA basique
+                    `)">
+                        <img src="img/projects/puck-man.png" alt="Puck-Man" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeu de labyrinthes aléatoires réalisé en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NSI ----------------------------------->
+        <section class="container mt-4">
+            <h3 class="titre-cv">NSI</h3>
+            <div class="row g-4">
+                
+                <!-- Set (Tkinter) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/set.png', 'Recréation du jeu de société “Set” en Python avec Tkinter dans une équipe de 2 en NSI')">
+                        <img src="img/projects/set.png" alt="Set Python" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Recréation du jeu de société “Set” (Python) en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Jeu du pendu -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/pendu.png', 'Jeu du pendu en python directement dans la console dans une équipe de 2 en NSI')">
+                        <img src="img/projects/pendu.png" alt="Jeu du pendu" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeu du pendu (Python) en équipe</h5>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Jeu de Noël -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/projet-noel-nsi.png', 'Collecter les cadeaux, éviter les bombes et les faux cadeaux. Pourrez-vous atteindre le score maximal avant la fin du temps imparti ?')">
+                        <img src="img/projects/projet-noel-nsi.png" alt="Mini jeu de Noël" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Mini jeu de Noël (Python, pygame)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jeu de pong -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/pong.png', 'Jeu de pong ou les deux joueurs jouent sur la même machine (touches ZS pour le joueur à gauche et flèches pour le joueur à droite)')">
+                        <img src="img/projects/pong.png" alt="Jeu du Pong" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeu de pong en 1V1 (Python, Pygame)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art abstrait -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/art-abstrait.png', 'Génération aléatoire d\'art abstrait (Python, Tkinter) en NSI')">
+                        <img src="img/projects/art-abstrait.png" alt="Art abstrait" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Art abstrait (Python, Tkinter)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pierre feuille ciseau -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card h-100" onclick="openPopup('img/projects/pierre-feuille-ciseau.png', 'Pierre feuille ciseau (Python, Tkinter) en NSI')">
+                        <img src="img/projects/pierre-feuille-ciseau.png" alt="Pierre feuille ciseau" class="project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Pierre feuille ciseau (Python, Tkinter)</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- Section Compétences -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="css-container">
+                    <h3 class="titre-cv">Compétences</h3>
+
+                    <!-- Langages de programmation -->
+                    <h4>Langages de programmation</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <span>Python, GDScript, C#, HTML</span>
+                            <div class="progress-bar" style="width: 70%;">70%</div>
+                        </li>
+                        <li>
+                            <span>JavaScript / TypeScript, Java, SQL</span>
+                            <div class="progress-bar" style="width: 45%;">45%</div>
+                        </li>
+                        <li>
+                            <span>C, C++, PHP, PL/SQL</span>
+                            <div class="progress-bar" style="width: 25%;">25%</div>
+                        </li>
+                        <li>
+                            <span>Go, Arduino</span>
+                            <div class="progress-bar" style="width: 10%;">10%</div>
+                        </li>
+                    </ul>
+
+                    <!-- Frameworks & Outils -->
+                    <h4>Frameworks & Outils</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <strong>Frontend :</strong> React, Vite, Tailwind CSS, Bootstrap, jQuery, Swing
+                        </li>
+                        <li>
+                            <strong>Backend :</strong> Node.js, Strapi, Python FastAPI, Ajax
+                        </li>
+                        <li>
+                            <strong>Bases de données :</strong> Oracle, MySQL, PostgreSQL, MongoDB, SQLite, NoSQL
+                        </li>
+                        <li>
+                            <strong>SGBD :</strong> DBeaver, pgAdmin, phpMyAdmin, Oracle SQL Developer
+                        </li>
+                        <li>
+                            <strong>Outils de bases de données :</strong> Elasticsearch, Kibana, Redis, Hibernate
+                        </li>
+                        <li>
+                            <strong>C# :</strong> .NET / ASP.NET, Razor, Windows Services, WinForms, xUnit, Npgsql, Oracle, API Controller, Minimal API, Swagger, Authentification
+                        </li>
+                        <li>
+                            <strong>Outils :</strong> GitHub / Git Bash, Docker, VirtualBox, Postman
+                        </li>
+                        <li>
+                            <strong>IDE :</strong> IntelliJ, PhpStorm, PyCharm, Visual Studio 2022, Godot Editor, Android Studio
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Langues + Bureautique -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="css-container">
+                    <h4 class="titre-cv">Langues</h4>
+                    <ul>
+                        <li>
+                            <span>Anglais B2 (niveau avancé)</span>
+                            <ul>
+                                <li>Toeic B2 905/990</li>
+                            </ul>
+                        </li>
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </li>
+                        <li>
+                            <span>Espagnol B1 (intermédiaire)</span>
+                            <div class="progress-bar" style="width: 25%;"></div>
+                        </li>
+                        <li>
+                            <span>Japonais A1 (débutant)</span>
+                            <div class="progress-bar" style="width: 10%;"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="css-container">
+
+                    <h4 class="titre-cv">Bureautique & Design</h4>
+                    <ul>
+                        <li>Microsoft 365</li>
+                        <li>Trello</li>
+                        <li>Canva</li>
+                        <li>Balsamic</li>
+                        <li>Looping</li>
+                        <li>Jira / Confluence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Profil + Centres d'Intérêts -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="css-container">
+                    <h3 class="titre-cv">Profil</h3>
+                    <ul>
+                        <li>À l'écoute, honnête, fiable, souriant, ouvert d’esprit, bienveillant</li>
+                        <li>Sérieux, motivé, passioné,  esprit logique</li>
+                        <li>capacité d’adaptation et d’apprentissage, autonome</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="css-container">
+                    <h3 class="titre-cv">Centres d'intérêts</h3>
+                    <ul class="list-unstyled">
+                        <li><strong>Sport :</strong> Callisthénie, musculation (BasicFit, footing, vélo)</li>
+                        <li><strong>GameDev :</strong> Développement en solo de mon jeu vidéo Tilescape</li>
+                        <li><strong>Musique :</strong> Composition, étude, production (dnb, breakcore, ambient, classique, OST..), mixage et chant</li>
+                        <li><strong>Instruments :</strong>
+                            <ul>
+                                <li>Piano</li>
+                                <li>Guitare</li>
+                                <li>Ukulélé</li>
+                            </ul>
+                        </li>
+                        <li>
+                        <a href="index.html" target="_blank">
+                             Découvrir mes créations musicales
+                        </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+    <!-- footer -->
+    <div data-include="/layout/footer.html"></div>
+
+    <!-- Popup avec image + texte -->
+    <div id="popup" class="popup" onclick="closePopup()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; flex-direction:column; z-index:9999; text-align:center;">
+        <img id="popup-img" src="" style="max-width:90%; max-height:70%; border:5px solid white; border-radius:10px; margin-bottom:20px;">
+        <p id="popup-text" style="color:white; font-size:1.5rem;"></p>
+    </div>
+
+</body>
+
+
+<script>
+    function openPopup(src, text) {
+        document.getElementById("popup-img").src = src;
+        document.getElementById("popup-text").innerText = text;
+        document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+
+</html>
